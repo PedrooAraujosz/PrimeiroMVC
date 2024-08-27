@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVC.models.Aluno>
+﻿@model IEnumerable<PrimeiroMVC.Models.Aluno>
 @{
     ViewData["title"] = "listar Alunos";
 }
@@ -13,4 +13,18 @@
         <th>Matrícula</th>
     </tr>
     <thead>
+
+    <tbody>
+            @foreach (var aluno in Model)
+            {
+            <tr>
+                <td>@aluno.AlunoId</td>
+                <td>@aluno.Nome</td>
+                <td>@aluno.Email</td>
+                <td>@aluno.RM</td>
+            </tr>
+
+            }
+    </tbody>
+
 </table>
